@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+#myTable th, #myTable td {
+  text-align: center;
+  padding: 14px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header {
+  background-color: #2F4F4F;
+}
+#myTable tr:hover {
+ background-color: #EEE9E2 ;
+}
+</style>
+</head>
+<body>
+
+<h2>PLAYERS LIST:</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Player.." title="Type in a name">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:60%;">Player Name</th>
+    <th style="width:40%;">Role</th>
+  </tr>
+  <tr>
+    <td>Smriti Mandhana</td>
+    <td>Right-Handed Batsmen</td>
+  </tr>
+  <tr>
+    <td>Harmanpreet Kaur</td>
+    <td>Left-Handed Batsmen</td>
+  </tr>
+  <tr>
+    <td>Veda Krishnamurthy</td>
+    <td>Right-Handed Batsmen</td>
+  </tr>
+  <tr>
+    <td>Taniya Bhatia</td>
+    <td>Right-Handed Batsmen</td>
+  </tr>
+  <tr>
+    <td>Jemimah Rodrigues</td>
+    <td>All-Rounder</td>
+  </tr>
+  <tr>
+    <td>harleen Doel</td>
+    <td>Right-Handed Batsmen</td>
+  </tr>
+  <tr>
+    <td>Deepti Sharma</td>
+    <td>All-Rounder</td>
+  </tr>
+  <tr>
+    <td>Shikha Pandey</td>
+    <td>Left-Handed Batsmen</td>
+  </tr>
+  <tr>
+    <td>Poonam Yadav</td>
+    <td>Leg-Spin Bowler</td>
+  </tr>
+  <tr>
+    <td>Radha Yadav</td>
+    <td>Right-Handed Medium Pace</td>
+  </tr>
+  <tr>
+    <td>Rajeswari Gayakwad</td>
+    <td>Right-Handed Bowler</td>
+  </tr>
+  <tr>
+    <td>Anuja Patil</td>
+    <td>Left-Handed Bowler</td>
+  </tr>
+  <tr>
+    <td>Mansi Joshi</td>
+    <td>Left-Handed Batsmen</td>
+  </tr>
+  <tr>
+    <td>Nuzhat Parween</td>
+    <td>Right-Handed Batsmen</td>
+  </tr>
+  <tr>
+    <td>Arundhati reddy</td>
+    <td>All-Rounder</td>
+  </tr>
+  <tr>
+    <td>Pooja Vastrakar</td>
+    <td>Right-Handed Batsmen</td>
+  </tr>
+  <tr>
+    <td>Richa Ghosh</td>
+    <td>Right-Handed Batsmen</td>
+  </tr>
+  <tr>
+    <td>Mithali Raj</td>
+    <td>Right-Handed Batsmen</td>
+  </tr>
+
+</table>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+</body>
+</html>

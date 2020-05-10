@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+#myTable th, #myTable td {
+  text-align: center;
+  padding: 14px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header {
+  background-color: #2F4F4F;
+}
+#myTable tr:hover {
+ background-color: #EEE9E2 ;
+}
+</style>
+</head>
+<body>
+
+<h2>PLAYERS LIST:</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Player.." title="Type in a name">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:60%;">Player Name</th>
+    <th style="width:40%;">Role</th>
+  </tr>
+  <tr>
+    <td>Virendra Sehwag</td>
+    <td>Right-Handed Batsmen</td>
+  </tr>
+  <tr>
+    <td>Gautham Gambir</td>
+    <td>Left-Handed Batsmen</td>
+  </tr>
+  <tr>
+    <td>Sachin Tendulkar</td>
+    <td>Right-Handed Batsmen</td>
+  </tr>
+  <tr>
+    <td>Virat Kohli</td>
+    <td>Right-Handed Batsmen</td>
+  </tr>
+  <tr>
+    <td>Yuvraj Singh</td>
+    <td>All-Rounder</td>
+  </tr>
+  <tr>
+    <td>M S Dhoni</td>
+    <td>Right-Handed Batsmen</td>
+  </tr>
+  <tr>
+    <td>Kedhar Jadhav</td>
+    <td>All-Rounder</td>
+  </tr>
+  <tr>
+    <td>R Jadeja</td>
+    <td>Left-Handed Batsmen</td>
+  </tr>
+  <tr>
+    <td>R Ashwin</td>
+    <td>Leg-Spin Bowler</td>
+  </tr>
+  <tr>
+    <td>M Shami</td>
+    <td>Right-Handed Medium Pace</td>
+  </tr>
+  <tr>
+    <td>Bhuvaneshwar</td>
+    <td>Right-Handed Bowler</td>
+  </tr>
+  <tr>
+    <td>J Bumrah</td>
+    <td>Left-Handed Bowler</td>
+  </tr>
+  <tr>
+    <td>Suresh Raina</td>
+    <td>Left-Handed Batsmen</td>
+  </tr>
+  <tr>
+    <td>Rohit Sharma</td>
+    <td>Right-Handed Batsmen</td>
+  </tr>
+  <tr>
+    <td>Hardik Pandya</td>
+    <td>Right-Handed Batsmen</td>
+  </tr>
+  <tr>
+    <td>K L Rahul</td>
+    <td>Left-Handed Batsmen</td>
+  </tr>
+  <tr>
+    <td>Rishab Pant</td>
+    <td>Right-Handed Batsmen</td>
+  </tr>
+  <tr>
+    <td>Prithvi Shaw</td>
+    <td>Right-Handed Batsmen</td>
+  </tr>
+  <tr>
+    <td>Ishant Sharma</td>
+    <td>Fast Bowler</td>
+  </tr>
+  <tr>
+    <td>Kuldeep Yadav</td>
+    <td>Spin Bowler</td>
+  </tr>
+  <tr>
+    <td>Y Chahal</td>
+    <td>Spin Bowler</td>
+  </tr>
+  <tr>
+    <td>Dinesh Karthik</td>
+    <td>Right-Handed Batsmen</td>
+  </tr>
+  <tr>
+    <td>Mayank Agarwal</td>
+    <td>Right-Handed Batsmen</td>
+  </tr>
+
+</table>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+</body>
+</html>

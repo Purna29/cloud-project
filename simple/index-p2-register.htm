@@ -1,0 +1,147 @@
+<HTML>
+<HEAD>
+       <TITLE>Home Page</TITLE>
+</HEAD>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body  {
+margin: 0;
+padding: 0;
+background-image: url("https://cdn.wallpapersafari.com/70/59/N18GJI.jpg");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+background-size: cover;
+}
+
+.loginbox {
+    width: 320px;
+    height: 600px;
+    background: transparent;
+    color: #fff;
+    align: right;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+     transform: translate(-50%,-50%);
+     box-sizing: border-box;
+     padding: 70px 30px;
+}
+ .h1 {
+        margin: 0;
+        padding: 0 0 20px;
+        text-align: center;
+        font-size: 24px;
+}
+
+.loginbox p {
+             margin: 0;
+             padding: 0;
+             font-weight: bold;
+             font-size: 18px;
+             font-color: #060601;
+}
+
+.loginbox input {
+width: 100%;
+margin-bottom: 20px;
+   }
+
+.loginbox input[type="text"], input[type="password"]
+{
+
+border: none;
+border-bottom: 1px solid #fff;
+background: transparent;
+outline: none;
+height: 40px;
+color: #060601;
+font-size: 16px;
+}
+
+.loginbox input[type="submit"]
+{
+border: none;
+outline: none;
+height: 40px;
+background: #fb2525;
+color: #060601;
+font-size: 18px;
+border-radius: 20px;
+}
+
+
+.loginbox input[type="submit"]:hover
+{
+cursor: pointer;
+background: #ffc107;
+color: #000;
+}
+
+.loginbox a{
+text-decoration: none;
+font-size: 18px;
+line-height: 20px;
+color: black;
+}
+
+.loginbox a :hover
+{
+ color: #ffc107;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+p {
+color: #060601;
+}
+
+h1 {
+color: #060601;
+}
+
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+
+  <align='"right" 
+ <div class="column">
+    <form action="register.cgi" method="post">
+      <div class="loginbox">
+            <h1> SIGN UP</h1>
+  <p> FirstName:</p>                                                      
+  <input type="text" name="firstname" placeholder="Enter FirstName" required>               
+  <p> LastName:</p>                                                               
+  <input type="text" name="lastname" placeholder="Enter LastName" required>  
+  <p> Email:</p>
+  <input type="text" name="email" placeholder="Enter Email" required> 
+  <p> Password:</p>
+  <input type="password" name="MyPass" placeholder="Enter Password" required>
+  <input type="submit" name=""  value="Sign Up">
+<a href="index-p3-login.htm"> Already have an account??</a>
+</div>
+</form>
+</align>
+
+</div>
+</body>
+</html>
